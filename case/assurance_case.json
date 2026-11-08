@@ -1,0 +1,695 @@
+{
+  "system": "Orbitly Support Assistant",
+  "version": "2.3.0",
+  "assessment_date": "2026-11-07",
+  "max_evidence_age_days": 90,
+  "context": [
+    "C1: The assistant answers customers from help articles (RAG), acts through tools and MCP servers, coordinates three agents for refunds, and is monitored in production.",
+    "C2: Every evidence item comes from the K11 teaching labs, most of them with simulated components. This case is a WORKED TEMPLATE showing how to argue from evidence; it is not an assurance of any real system."
+  ],
+  "scope_exclusions": [
+    {
+      "characteristic": "fair with harmful bias managed",
+      "justification": "The assistant answers product questions and makes no decisions about individuals; no lab in the evidence base measures fairness across customer groups. Excluded for this release, and recorded as residual risk R6 so the exclusion has an owner and an expiry."
+    }
+  ],
+  "claims": [
+    {
+      "id": "G0",
+      "parent": null,
+      "text": "Orbitly Support Assistant 2.3.0 is acceptably safe, effective and controllable for release to customers.",
+      "strategy": "Argue over each quality attribute, with evidence from the lab that tests it; accept stated residual risks.",
+      "critical": true,
+      "frameworks": {
+        "eu_ai_act": [
+          "Art. 9",
+          "Art. 11"
+        ],
+        "nist_functions": [
+          "GOVERN",
+          "MAP"
+        ],
+        "iso42001": [
+          "6"
+        ],
+        "nist_characteristics": [
+          "accountable and transparent"
+        ]
+      }
+    },
+    {
+      "id": "G1",
+      "parent": "G0",
+      "text": "Answers are correct, grounded in the help articles, and cite the article they came from.",
+      "critical": true,
+      "frameworks": {
+        "eu_ai_act": [
+          "Art. 13",
+          "Art. 15"
+        ],
+        "nist_functions": [
+          "MEASURE"
+        ],
+        "iso42001": [
+          "9"
+        ],
+        "nist_characteristics": [
+          "valid and reliable",
+          "explainable and interpretable"
+        ]
+      }
+    },
+    {
+      "id": "G2",
+      "parent": "G0",
+      "text": "The model is fit for purpose and does not memorise or leak training secrets.",
+      "critical": false,
+      "frameworks": {
+        "eu_ai_act": [
+          "Art. 15"
+        ],
+        "nist_functions": [
+          "MEASURE"
+        ],
+        "iso42001": [
+          "8"
+        ],
+        "nist_characteristics": [
+          "safe",
+          "privacy-enhanced"
+        ]
+      }
+    },
+    {
+      "id": "G3",
+      "parent": "G0",
+      "text": "Actions the assistant takes in the world are the ones the customer asked for.",
+      "critical": true,
+      "frameworks": {
+        "eu_ai_act": [
+          "Art. 15"
+        ],
+        "nist_functions": [
+          "MEASURE",
+          "MANAGE"
+        ],
+        "iso42001": [
+          "8"
+        ],
+        "nist_characteristics": [
+          "safe"
+        ]
+      }
+    },
+    {
+      "id": "G4",
+      "parent": "G0",
+      "text": "The three-agent refund flow never pays twice and failures can be attributed.",
+      "critical": true,
+      "frameworks": {
+        "eu_ai_act": [
+          "Art. 15"
+        ],
+        "nist_functions": [
+          "MEASURE"
+        ],
+        "iso42001": [
+          "8"
+        ],
+        "nist_characteristics": [
+          "valid and reliable",
+          "accountable and transparent"
+        ]
+      }
+    },
+    {
+      "id": "G5",
+      "parent": "G0",
+      "text": "Production behaviour is recorded and incidents are detected and fed back into tests.",
+      "critical": false,
+      "frameworks": {
+        "eu_ai_act": [
+          "Art. 12"
+        ],
+        "nist_functions": [
+          "MANAGE"
+        ],
+        "iso42001": [
+          "9",
+          "10"
+        ],
+        "nist_characteristics": [
+          "accountable and transparent"
+        ]
+      }
+    },
+    {
+      "id": "G6",
+      "parent": "G0",
+      "text": "Performance and cost stay within service levels and budgets under expected load.",
+      "critical": false,
+      "frameworks": {
+        "eu_ai_act": [
+          "Art. 15"
+        ],
+        "nist_functions": [
+          "MEASURE"
+        ],
+        "iso42001": [
+          "9"
+        ],
+        "nist_characteristics": [
+          "valid and reliable"
+        ]
+      }
+    },
+    {
+      "id": "G7",
+      "parent": "G0",
+      "text": "The automated evaluators used as evidence are themselves trustworthy.",
+      "critical": true,
+      "frameworks": {
+        "eu_ai_act": [
+          "Art. 15"
+        ],
+        "nist_functions": [
+          "MEASURE"
+        ],
+        "iso42001": [
+          "9"
+        ],
+        "nist_characteristics": [
+          "valid and reliable"
+        ]
+      }
+    },
+    {
+      "id": "G8",
+      "parent": "G0",
+      "text": "Eval data, training data and the knowledge base are fit for use.",
+      "critical": true,
+      "frameworks": {
+        "eu_ai_act": [
+          "Art. 10"
+        ],
+        "nist_functions": [
+          "MAP",
+          "MEASURE"
+        ],
+        "iso42001": [
+          "8"
+        ],
+        "nist_characteristics": [
+          "valid and reliable",
+          "privacy-enhanced"
+        ]
+      }
+    },
+    {
+      "id": "G9",
+      "parent": "G0",
+      "text": "Attackers cannot make the assistant leak data, misuse tools or run up costs.",
+      "critical": true,
+      "required_bound": 0.005,
+      "frameworks": {
+        "eu_ai_act": [
+          "Art. 15"
+        ],
+        "nist_functions": [
+          "MEASURE",
+          "MANAGE"
+        ],
+        "iso42001": [
+          "8"
+        ],
+        "nist_characteristics": [
+          "secure and resilient"
+        ]
+      }
+    },
+    {
+      "id": "G10",
+      "parent": "G0",
+      "text": "Third-party tools reached through MCP cannot hijack the assistant.",
+      "critical": true,
+      "frameworks": {
+        "eu_ai_act": [
+          "Art. 15"
+        ],
+        "nist_functions": [
+          "MANAGE"
+        ],
+        "iso42001": [
+          "8"
+        ],
+        "nist_characteristics": [
+          "secure and resilient"
+        ]
+      }
+    },
+    {
+      "id": "G11",
+      "parent": "G0",
+      "text": "When the system cannot complete a task safely, it stops and hands over to a person.",
+      "critical": false,
+      "frameworks": {
+        "eu_ai_act": [
+          "Art. 14"
+        ],
+        "nist_functions": [
+          "GOVERN",
+          "MANAGE"
+        ],
+        "iso42001": [
+          "8"
+        ],
+        "nist_characteristics": [
+          "safe",
+          "accountable and transparent"
+        ]
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E1",
+      "claim": "G1",
+      "lab": "quality",
+      "file": "docs/sample-reports/eval-report.md",
+      "quote": "| correctness | 0.926 | >= 0.9 ✅ |",
+      "kind": "gate",
+      "method": "golden-set eval",
+      "system_version": "2.3.0",
+      "collected": "2026-11-07",
+      "relies_on_evaluator": "E3"
+    },
+    {
+      "id": "E2",
+      "claim": "G1",
+      "lab": "quality",
+      "file": "docs/sample-reports/eval-report.md",
+      "quote": "| groundedness | 1.0 | >= 0.95 ✅ |",
+      "kind": "gate",
+      "method": "groundedness metric",
+      "system_version": "2.3.0",
+      "collected": "2026-11-07",
+      "relies_on_evaluator": "E3"
+    },
+    {
+      "id": "E3",
+      "claim": "G7",
+      "lab": "quality",
+      "file": "docs/sample-reports/judge-report.md",
+      "quote": "Judge agreement gate passed (kappa >= 0.5).",
+      "kind": "gate",
+      "method": "judge vs human labels",
+      "system_version": "2.3.0",
+      "collected": "2026-11-07"
+    },
+    {
+      "id": "E4",
+      "claim": "G2",
+      "lab": "model",
+      "file": "README.md",
+      "quote": "scrubbing it before training prevents that.",
+      "kind": "documented-finding",
+      "method": "memorisation test",
+      "system_version": "2.3.0",
+      "collected": "2026-11-07"
+    },
+    {
+      "id": "E5",
+      "claim": "G2",
+      "lab": "model",
+      "file": "README.md",
+      "quote": "Simulated int8 weights barely change the model",
+      "kind": "documented-finding",
+      "method": "quantization drift",
+      "system_version": "2.3.0",
+      "collected": "2026-11-07"
+    },
+    {
+      "id": "E6",
+      "claim": "G3",
+      "lab": "agent",
+      "file": "README.md",
+      "quote": "Evaluations on world state caught it.",
+      "kind": "documented-finding",
+      "method": "world-state evaluation",
+      "system_version": "2.3.0",
+      "collected": "2026-11-07"
+    },
+    {
+      "id": "E7",
+      "claim": "G3",
+      "lab": "multi_agent",
+      "file": "experiments/results/summary.md",
+      "quote": "| triage=relay | on | 0.94 | 0 | 0 | 0 | 0 |",
+      "kind": "measurement",
+      "method": "handoff contract enforcement",
+      "system_version": "2.3.0",
+      "collected": "2026-11-07"
+    },
+    {
+      "id": "E8",
+      "claim": "G4",
+      "lab": "multi_agent",
+      "file": "experiments/results/summary.md",
+      "quote": "| same key | partial refund ($20) | 0.5 | 0 | 0.0 | 0 |",
+      "kind": "measurement",
+      "method": "idempotency under ambiguous timeouts",
+      "system_version": "2.3.0",
+      "collected": "2026-11-07",
+      "successes": 0,
+      "n": 200
+    },
+    {
+      "id": "E9",
+      "claim": "G4",
+      "lab": "multi_agent",
+      "file": "experiments/results/summary.md",
+      "quote": "first violation exact 0.67, names a faulty agent 1.00",
+      "kind": "measurement",
+      "method": "blame assignment",
+      "system_version": "2.3.0",
+      "collected": "2026-11-07"
+    },
+    {
+      "id": "E10",
+      "claim": "G5",
+      "lab": "monitoring",
+      "file": "experiments/results/summary.md",
+      "quote": "| standard (p95, z>=3 + min effect) | 0.957 ± 0.020 |",
+      "kind": "measurement",
+      "method": "incident detection across seeds",
+      "system_version": "2.3.0",
+      "collected": "2026-11-07"
+    },
+    {
+      "id": "E11",
+      "claim": "G5",
+      "lab": "monitoring",
+      "file": "experiments/results/summary.md",
+      "quote": "- Recall: 0.995 ± 0.001",
+      "kind": "measurement",
+      "method": "online groundedness evaluator",
+      "system_version": "2.3.0",
+      "collected": "2026-11-07"
+    },
+    {
+      "id": "E12",
+      "claim": "G6",
+      "lab": "performance",
+      "file": "experiments/results/summary.md",
+      "quote": "| route by intent (default) | 0.00431 | 0.924 |",
+      "kind": "measurement",
+      "method": "cost per resolved request",
+      "system_version": "2.3.0",
+      "collected": "2026-11-07"
+    },
+    {
+      "id": "E13",
+      "claim": "G6",
+      "lab": "performance",
+      "file": "experiments/results/summary.md",
+      "quote": "| short burst (20 rps for 10 s) | backoff | 0.0046 |",
+      "kind": "measurement",
+      "method": "burst load with backoff",
+      "system_version": "2.3.0",
+      "collected": "2026-11-07"
+    },
+    {
+      "id": "E14",
+      "claim": "G7",
+      "lab": "evaluation",
+      "file": "experiments/results/summary.md",
+      "quote": "| fair, counterbalanced | alpha > beta > gamma > delta | True |",
+      "kind": "measurement",
+      "method": "judge bias battery",
+      "system_version": "2.3.0",
+      "collected": "2026-11-07"
+    },
+    {
+      "id": "E15",
+      "claim": "G7",
+      "lab": "evaluation",
+      "file": "experiments/results/summary.md",
+      "quote": "| sudden: +0.15 on day 10 | 0.0 | 0.43 | 11.0 | 0.0 | 0.9 | 9.0 |",
+      "kind": "measurement",
+      "method": "judge drift monitoring",
+      "system_version": "2.3.0",
+      "collected": "2026-11-07"
+    },
+    {
+      "id": "E16",
+      "claim": "G8",
+      "lab": "data",
+      "file": "experiments/results/summary.md",
+      "quote": "| 5 stale documents | 5 | 0 | 0.844 | 1.0 | 1.0 |",
+      "kind": "measurement",
+      "method": "corpus health check",
+      "system_version": "2.3.0",
+      "collected": "2026-11-07"
+    },
+    {
+      "id": "E17",
+      "claim": "G8",
+      "lab": "data",
+      "file": "experiments/results/summary.md",
+      "quote": "| 0.15 | 4.1 | 0.86 | 1.0 | 0 |",
+      "kind": "measurement",
+      "method": "label audit",
+      "system_version": "2.3.0",
+      "collected": "2026-11-07"
+    },
+    {
+      "id": "E18",
+      "claim": "G9",
+      "lab": "security",
+      "file": "experiments/results/summary.md",
+      "quote": "| all layers (recommended) | 0.0 | none | 0.0 |",
+      "kind": "measurement",
+      "method": "static attack suite, 20 repeats",
+      "system_version": "2.3.0",
+      "collected": "2026-11-07",
+      "successes": 0,
+      "n": 1440
+    },
+    {
+      "id": "E19",
+      "claim": "G9",
+      "lab": "security",
+      "file": "experiments/results/summary.md",
+      "quote": "| low | 0.333 | 0.0 | 0.0 | 0.0 |",
+      "kind": "measurement",
+      "method": "input filter utility",
+      "system_version": "2.3.0",
+      "collected": "2026-11-07"
+    },
+    {
+      "id": "E20",
+      "claim": "G10",
+      "lab": "mcp",
+      "file": "experiments/results/summary.md",
+      "quote": "| collider | 100% harm / 100% done | 0% harm / 100% done |",
+      "kind": "measurement",
+      "method": "host red team: collisions",
+      "system_version": "2.3.0",
+      "collected": "2026-11-07"
+    },
+    {
+      "id": "E21",
+      "claim": "G10",
+      "lab": "mcp",
+      "file": "experiments/results/summary.md",
+      "quote": "| paraphrased | 0 | 66% harm / 100% done | 66% harm / 100% done | 0% harm / 34% done | 0% harm / 34% done |",
+      "kind": "measurement",
+      "method": "host red team: tool poisoning",
+      "system_version": "2.3.0",
+      "collected": "2026-11-07"
+    },
+    {
+      "id": "E22",
+      "claim": "G11",
+      "lab": "multi_agent",
+      "file": "experiments/results/summary.md",
+      "quote": "| triage=lossy | on | 0.5 | 0 | 0 | 0 | 8 |",
+      "kind": "measurement",
+      "method": "loop stop and escalation",
+      "system_version": "2.3.0",
+      "collected": "2026-11-07"
+    },
+    {
+      "id": "E23",
+      "claim": "G11",
+      "lab": "agent",
+      "file": "README.md",
+      "quote": "escalate to a human",
+      "kind": "documented-finding",
+      "method": "agent escalation path",
+      "system_version": "2.3.0",
+      "collected": "2026-11-07"
+    },
+    {
+      "id": "E24",
+      "claim": "G2",
+      "lab": "security",
+      "file": "experiments/results/summary.md",
+      "quote": "| all layers (recommended) | 0.0 | none | 0.0 |",
+      "kind": "measurement",
+      "method": "jailbreak output blocked by layers",
+      "system_version": "2.3.0",
+      "collected": "2026-11-07"
+    },
+    {
+      "id": "E25",
+      "claim": "G1",
+      "lab": "quality",
+      "file": "docs/sample-reports/eval-report.md",
+      "quote": "| citation_validity | 1.0 | >= 1.0 ✅ |",
+      "kind": "gate",
+      "method": "citation check",
+      "system_version": "2.3.0",
+      "collected": "2026-11-07"
+    }
+  ],
+  "defeaters": [
+    {
+      "id": "D1",
+      "claim": "G1",
+      "lab": "quality",
+      "file": "docs/sample-reports/eval-report.md",
+      "quote": "Known failure: the extractive model picks the 'how to request' sentence.",
+      "text": "Known failing eval cases: a refund-deadline question, an unanswerable question answered, a paraphrase refused.",
+      "resolution": {
+        "type": "accepted",
+        "risk": "R1"
+      }
+    },
+    {
+      "id": "D2",
+      "claim": "G2",
+      "lab": "model",
+      "file": "README.md",
+      "quote": "SmolLM2-135M complies with harmful requests",
+      "text": "The model on its own complies with harmful requests.",
+      "resolution": {
+        "type": "rebutted",
+        "by": [
+          "E24"
+        ],
+        "note": "The model is never exposed alone: with all security layers on, no jailbreak output reached a user in 1,440 attempts."
+      }
+    },
+    {
+      "id": "D3",
+      "claim": "G3",
+      "lab": "agent",
+      "file": "README.md",
+      "quote": "is handled as a status question: a documented known failure.",
+      "text": "A refund request phrased without the word 'refund' is routed as a status question.",
+      "resolution": {
+        "type": "accepted",
+        "risk": "R2"
+      }
+    },
+    {
+      "id": "D4",
+      "claim": "G5",
+      "lab": "monitoring",
+      "file": "experiments/results/summary.md",
+      "quote": "| 0.06 | 0.74 [0.60, 0.84] | 0.02 [0.00, 0.10] |",
+      "text": "A latency incident affecting 6% of requests is detected on onset day only 74% of the time.",
+      "resolution": {
+        "type": "accepted",
+        "risk": "R3"
+      }
+    },
+    {
+      "id": "D5",
+      "claim": "G7",
+      "lab": "quality",
+      "file": "docs/sample-reports/judge-report.md",
+      "quote": "the judge (kappa 0.74) agrees with the final labels more than the reviewers agree with each other",
+      "text": "The judge beats the human ceiling on 24 labels: possible overfitting, and a wide interval.",
+      "resolution": {
+        "type": "accepted",
+        "risk": "R4"
+      }
+    },
+    {
+      "id": "D6",
+      "claim": "G8",
+      "lab": "data",
+      "file": "experiments/results/summary.md",
+      "quote": "| 0.1 | 0.715 | 5.0 | 1.0 | 0.2 | 0.6 | 49 | 0.698 |",
+      "text": "About 40% of reworded eval leaks escape the contamination check, so measured accuracy may be inflated.",
+      "resolution": {
+        "type": "accepted",
+        "risk": "R5"
+      }
+    }
+  ],
+  "residual_risks": [
+    {
+      "id": "R1",
+      "claim": "G1",
+      "text": "Three known answer failures remain (refund deadline, an unanswerable question, a paraphrase).",
+      "owner": "Head of Support Quality",
+      "accepted_on": "2026-11-07",
+      "expires": "2027-02-05",
+      "rationale": "Each is low impact and the answer cites its source; fixes are scheduled for 2.4.",
+      "monitoring": "Groundedness and refusal monitors in production; the three cases stay in the regression suite."
+    },
+    {
+      "id": "R2",
+      "claim": "G3",
+      "text": "Refund requests without the word 'refund' can be mis-routed as status questions.",
+      "owner": "Agent Platform Lead",
+      "accepted_on": "2026-11-07",
+      "expires": "2027-02-05",
+      "rationale": "The failure is safe (no action is taken); the customer is asked again.",
+      "monitoring": "Unresolved-conversation rate by intent."
+    },
+    {
+      "id": "R3",
+      "claim": "G5",
+      "text": "Small latency incidents (about 6% of requests) may be detected a day late.",
+      "owner": "SRE Lead",
+      "accepted_on": "2026-11-07",
+      "expires": "2027-02-05",
+      "rationale": "Larger incidents (8% and above) are detected on onset day in every seed.",
+      "monitoring": "p95 latency alert; weekly review of the latency distribution."
+    },
+    {
+      "id": "R4",
+      "claim": "G7",
+      "text": "The groundedness judge was validated on 24 labels, beats the human ceiling and has a wide interval.",
+      "owner": "Evaluation Lead",
+      "accepted_on": "2026-11-07",
+      "expires": "2027-02-05",
+      "rationale": "The judge passed bias and drift checks in the evaluation science lab; a 200-item held-out label set is scheduled.",
+      "monitoring": "Anchor-set CUSUM drift monitor on the judge."
+    },
+    {
+      "id": "R5",
+      "claim": "G8",
+      "text": "Reworded contamination is only partly detected; eval scores may be inflated by a few points.",
+      "owner": "Data Lead",
+      "accepted_on": "2026-11-07",
+      "expires": "2027-02-05",
+      "rationale": "Release thresholds include margin; an embedding-based contamination check is scheduled.",
+      "monitoring": "Production accuracy estimate compared with eval accuracy each release."
+    },
+    {
+      "id": "R6",
+      "claim": "G0",
+      "text": "Fairness across customer groups is not measured (scope exclusion).",
+      "owner": "Responsible AI Lead",
+      "accepted_on": "2026-11-07",
+      "expires": "2027-02-05",
+      "rationale": "No decisions about individuals; revisit if the assistant gains eligibility, pricing or account-action decisions.",
+      "monitoring": "Complaint and escalation rates by language and region."
+    }
+  ]
+}

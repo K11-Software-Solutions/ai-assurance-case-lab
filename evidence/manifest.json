@@ -1,0 +1,62 @@
+{
+  "becoming-ai-quality-engineer/docs/sample-reports/eval-report.md": {
+    "commit": "0e2e0e49c1bc7af99668fb4682ef9798478fb7bf",
+    "sha256": "700b06935d885adca24058de09b044690b8119877095d641c985b99c0827bf2c",
+    "url": "https://raw.githubusercontent.com/K11-Software-Solutions/becoming-ai-quality-engineer/0e2e0e49c1bc7af99668fb4682ef9798478fb7bf/docs/sample-reports/eval-report.md"
+  },
+  "becoming-ai-quality-engineer/docs/sample-reports/judge-report.md": {
+    "commit": "0e2e0e49c1bc7af99668fb4682ef9798478fb7bf",
+    "sha256": "cb55f51d8cc70b600b6d9918d84b1feb6b894c9111579fb34b8919676ba8de08",
+    "url": "https://raw.githubusercontent.com/K11-Software-Solutions/becoming-ai-quality-engineer/0e2e0e49c1bc7af99668fb4682ef9798478fb7bf/docs/sample-reports/judge-report.md"
+  },
+  "becoming-ai-quality-engineer/docs/sample-reports/severity-report.md": {
+    "commit": "0e2e0e49c1bc7af99668fb4682ef9798478fb7bf",
+    "sha256": "92b6c218f168f82f2edbe505c24a54f30f842bb921378076acdae0071aed1a0d",
+    "url": "https://raw.githubusercontent.com/K11-Software-Solutions/becoming-ai-quality-engineer/0e2e0e49c1bc7af99668fb4682ef9798478fb7bf/docs/sample-reports/severity-report.md"
+  },
+  "llm-model-testing-lab/README.md": {
+    "commit": "36b32a6bd624cfd9ed8f9ed66f59ff447fdf843f",
+    "sha256": "b2294ee0ba478bb42941594c2be42841f05c122bcf0d1e57961cb6ef6ac9dd56",
+    "url": "https://raw.githubusercontent.com/K11-Software-Solutions/llm-model-testing-lab/36b32a6bd624cfd9ed8f9ed66f59ff447fdf843f/README.md"
+  },
+  "agent-testing-lab/README.md": {
+    "commit": "851355c675279f8bccb363ba60d5fa2f067632e9",
+    "sha256": "64594f48c94bc274871a39b254760f40174fb3e36c4ebe68b200c0e788f9caf9",
+    "url": "https://raw.githubusercontent.com/K11-Software-Solutions/agent-testing-lab/851355c675279f8bccb363ba60d5fa2f067632e9/README.md"
+  },
+  "ai-production-monitoring-lab/experiments/results/summary.md": {
+    "commit": "15be57cc1b36d46f79fb238ebcc75be465b4f5bc",
+    "sha256": "ebc2ea85b5d52e64af3ee7f3341940e1cf5df234c9f599ebf05875630f7b964f",
+    "url": "https://raw.githubusercontent.com/K11-Software-Solutions/ai-production-monitoring-lab/15be57cc1b36d46f79fb238ebcc75be465b4f5bc/experiments/results/summary.md"
+  },
+  "multi-agent-testing-lab/experiments/results/summary.md": {
+    "commit": "6a17a3dd037916e86827a9437cc7c80cc297fb5b",
+    "sha256": "b43672120a994995fee76376a83b95920f7644b00e2deedc35bfba875ad2d976",
+    "url": "https://raw.githubusercontent.com/K11-Software-Solutions/multi-agent-testing-lab/6a17a3dd037916e86827a9437cc7c80cc297fb5b/experiments/results/summary.md"
+  },
+  "ai-performance-cost-lab/experiments/results/summary.md": {
+    "commit": "0ff821a41fabca934d7d2555fe5e06ccf00bbd89",
+    "sha256": "abc1ff13e5e0cf5f1767f8764e1a0f0e7b9053adeedd97c42a08c7d16f9d122e",
+    "url": "https://raw.githubusercontent.com/K11-Software-Solutions/ai-performance-cost-lab/0ff821a41fabca934d7d2555fe5e06ccf00bbd89/experiments/results/summary.md"
+  },
+  "ai-evaluation-science-lab/experiments/results/summary.md": {
+    "commit": "a83bdd83c8cdf09cd6185afd52c772f8650aec41",
+    "sha256": "767c6c2b68f9b003832509fd232c7257922d995a1d4bce8639f8599ffe8eb77c",
+    "url": "https://raw.githubusercontent.com/K11-Software-Solutions/ai-evaluation-science-lab/a83bdd83c8cdf09cd6185afd52c772f8650aec41/experiments/results/summary.md"
+  },
+  "ai-data-quality-lab/experiments/results/summary.md": {
+    "commit": "b53f47b5d77bf2c93cec217091c60aabe8f8e579",
+    "sha256": "1f45769a3313b111eb381d46aad19bb24652ad5126f9713cc41385e7af74d2ec",
+    "url": "https://raw.githubusercontent.com/K11-Software-Solutions/ai-data-quality-lab/b53f47b5d77bf2c93cec217091c60aabe8f8e579/experiments/results/summary.md"
+  },
+  "ai-security-testing-lab/experiments/results/summary.md": {
+    "commit": "d815003dc2fce9dfcf1b02c01a0e56681f8e23b2",
+    "sha256": "26c73bbc37653d1a06ae08517f8a41a22b0f9db09a7bbebbce509998906c92aa",
+    "url": "https://raw.githubusercontent.com/K11-Software-Solutions/ai-security-testing-lab/d815003dc2fce9dfcf1b02c01a0e56681f8e23b2/experiments/results/summary.md"
+  },
+  "mcp-testing-lab/experiments/results/summary.md": {
+    "commit": "1a54ed45d54824d8b24989a869e352a4dbdf6c49",
+    "sha256": "4f17290617cd48a8421c26dfb8813e8afd3e56e852825b3b8b3548eee2f8df89",
+    "url": "https://raw.githubusercontent.com/K11-Software-Solutions/mcp-testing-lab/1a54ed45d54824d8b24989a869e352a4dbdf6c49/experiments/results/summary.md"
+  }
+}

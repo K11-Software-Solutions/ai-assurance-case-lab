@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this software or its articles, please cite it as below."
+type: software
+title: "AI Assurance Case Lab"
+abstract: "The capstone of a ten-lab series: an assurance case that turns pinned evidence from AI testing labs into one reviewable release argument, with defeaters, residual risks, mappings to NIST AI RMF, ISO/IEC 42001 and the EU AI Act, and checks that test the argument itself."
+authors:
+  - family-names: Jadhav
+    given-names: Kavita
+    affiliation: K11 Software Solutions
+    # orcid: "https://orcid.org/0000-0000-0000-0000"   # add your ORCID iD here and in .zenodo.json
+repository-code: "https://github.com/K11-Software-Solutions/ai-assurance-case-lab"
+url: "https://github.com/K11-Software-Solutions/ai-assurance-case-lab"
+version: "1.0.0"
+license:
+  - MIT
+  - CC-BY-4.0
+keywords:
+  - assurance-case
+  - ai-assurance
+  - ai-governance
+  - nist-ai-rmf
+  - iso-42001
+  - eu-ai-act
+  - ai-quality-engineering
+  - risk-management
+  - release-readiness
+# After the first Zenodo release, add the concept DOI (it always resolves to the latest version):
+# identifiers:
+#   - type: doi
+#     value: "10.5281/zenodo.XXXXXXX"
+#     description: Concept DOI (all versions)

@@ -1,0 +1,11 @@
+[project]
+name = "ai-assurance-case-lab"
+version = "1.0.0"
+description = "An assurance case for an AI system: claims, arguments and pinned evidence from ten testing labs, mapped to NIST AI RMF, ISO/IEC 42001 and the EU AI Act, with tests on the case itself and a release decision."
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-ra"

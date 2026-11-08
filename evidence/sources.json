@@ -1,0 +1,94 @@
+{
+  "quality": {
+    "repo": "becoming-ai-quality-engineer",
+    "version": "v1.0.0",
+    "commit": "0e2e0e49c1bc7af99668fb4682ef9798478fb7bf",
+    "doi": "10.5281/zenodo.24015020",
+    "files": [
+      "docs/sample-reports/eval-report.md",
+      "docs/sample-reports/judge-report.md",
+      "docs/sample-reports/severity-report.md"
+    ]
+  },
+  "model": {
+    "repo": "llm-model-testing-lab",
+    "version": "v1.0.0",
+    "commit": "36b32a6bd624cfd9ed8f9ed66f59ff447fdf843f",
+    "doi": "10.5281/zenodo.24015643",
+    "files": [
+      "README.md"
+    ]
+  },
+  "agent": {
+    "repo": "agent-testing-lab",
+    "version": "v1.0.0",
+    "commit": "851355c675279f8bccb363ba60d5fa2f067632e9",
+    "doi": "10.5281/zenodo.24015671",
+    "files": [
+      "README.md"
+    ]
+  },
+  "monitoring": {
+    "repo": "ai-production-monitoring-lab",
+    "version": "v1.0.0",
+    "commit": "15be57cc1b36d46f79fb238ebcc75be465b4f5bc",
+    "doi": "10.5281/zenodo.24015930",
+    "files": [
+      "experiments/results/summary.md"
+    ]
+  },
+  "multi_agent": {
+    "repo": "multi-agent-testing-lab",
+    "version": "v1.0.0",
+    "commit": "6a17a3dd037916e86827a9437cc7c80cc297fb5b",
+    "doi": "10.5281/zenodo.24025291",
+    "files": [
+      "experiments/results/summary.md"
+    ]
+  },
+  "performance": {
+    "repo": "ai-performance-cost-lab",
+    "version": "v1.0.0",
+    "commit": "0ff821a41fabca934d7d2555fe5e06ccf00bbd89",
+    "doi": "10.5281/zenodo.24025302",
+    "files": [
+      "experiments/results/summary.md"
+    ]
+  },
+  "evaluation": {
+    "repo": "ai-evaluation-science-lab",
+    "version": "v1.0.0",
+    "commit": "a83bdd83c8cdf09cd6185afd52c772f8650aec41",
+    "doi": "10.5281/zenodo.24025310",
+    "files": [
+      "experiments/results/summary.md"
+    ]
+  },
+  "data": {
+    "repo": "ai-data-quality-lab",
+    "version": "v1.0.0",
+    "commit": "b53f47b5d77bf2c93cec217091c60aabe8f8e579",
+    "doi": "10.5281/zenodo.24025320",
+    "files": [
+      "experiments/results/summary.md"
+    ]
+  },
+  "security": {
+    "repo": "ai-security-testing-lab",
+    "version": "v1.0.0",
+    "commit": "d815003dc2fce9dfcf1b02c01a0e56681f8e23b2",
+    "doi": "10.5281/zenodo.24039872",
+    "files": [
+      "experiments/results/summary.md"
+    ]
+  },
+  "mcp": {
+    "repo": "mcp-testing-lab",
+    "version": "v1.0.0",
+    "commit": "1a54ed45d54824d8b24989a869e352a4dbdf6c49",
+    "doi": "10.5281/zenodo.24039888",
+    "files": [
+      "experiments/results/summary.md"
+    ]
+  }
+}

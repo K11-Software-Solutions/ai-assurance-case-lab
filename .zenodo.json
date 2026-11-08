@@ -1,0 +1,24 @@
+{
+  "title": "AI Assurance Case Lab",
+  "description": "The capstone of a ten-lab series: an assurance case that turns pinned evidence from AI testing labs into one reviewable release argument, with defeaters, residual risks, mappings to NIST AI RMF, ISO/IEC 42001 and the EU AI Act, and checks that test the argument itself.",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Jadhav, Kavita",
+      "affiliation": "K11 Software Solutions"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "assurance-case",
+    "ai-assurance",
+    "ai-governance",
+    "nist-ai-rmf",
+    "iso-42001",
+    "eu-ai-act",
+    "ai-quality-engineering",
+    "risk-management",
+    "release-readiness"
+  ],
+  "notes": "Code is licensed under MIT; the written material (articles/) is licensed under CC BY 4.0. Orbitly is fictional; evidence comes from teaching labs; framework mappings are not a legal assessment."
+}
